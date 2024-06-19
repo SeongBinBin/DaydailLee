@@ -1,0 +1,30 @@
+.header_container{
+    background-color: lightgray;
+    position: sticky;
+}
+
+.header_area{
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.header_logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header_icon{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.header_icon:hover{
+    color: #989898;
+}
+
+.header_icon_group{
+    display: flex;
+    gap: 10px;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import './Header.css'
 import { AiOutlineMenu, AiOutlineClose, AiOutlineUser, } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";

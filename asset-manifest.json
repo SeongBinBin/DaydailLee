@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/DaydailLee/static/css/main.1ca8418c.css",
-    "main.js": "/DaydailLee/static/js/main.ddefc80c.js",
+    "main.css": "/DaydailLee/static/css/main.f465b8ac.css",
+    "main.js": "/DaydailLee/static/js/main.5921ff16.js",
     "static/js/453.2eb78869.chunk.js": "/DaydailLee/static/js/453.2eb78869.chunk.js",
     "index.html": "/DaydailLee/index.html",
-    "main.1ca8418c.css.map": "/DaydailLee/static/css/main.1ca8418c.css.map",
-    "main.ddefc80c.js.map": "/DaydailLee/static/js/main.ddefc80c.js.map",
+    "main.f465b8ac.css.map": "/DaydailLee/static/css/main.f465b8ac.css.map",
+    "main.5921ff16.js.map": "/DaydailLee/static/js/main.5921ff16.js.map",
     "453.2eb78869.chunk.js.map": "/DaydailLee/static/js/453.2eb78869.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1ca8418c.css",
-    "static/js/main.ddefc80c.js"
+    "static/css/main.f465b8ac.css",
+    "static/js/main.5921ff16.js"
   ]
 }

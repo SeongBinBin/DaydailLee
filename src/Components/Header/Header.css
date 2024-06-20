@@ -1,11 +1,12 @@
 .header_container{
-    background-color: lightgray;
-    position: sticky;
+    /* position: fixed; */
+    width: 100%;
 }
 
 .header_area{
+    background-color: lightgray;
     display: flex;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
@@ -27,4 +28,89 @@
 .header_icon_group{
     display: flex;
     gap: 10px;
+}
+
+.list_area{
+    position: absolute;
+    height: 100vh;
+    width: 20%;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.list_area span{
+    cursor: pointer;
+}
+.list_area span:hover{
+    color: #989898;
+}
+
+.user_area{
+    position: absolute;
+    /* height: 100vh; */
+    width: 25%;
+    background-color: lightgray;
+    right: 0;
+}
+
+.login_area{
+    /* background-color: #fff; */
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.login_title{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.login_input_area{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 3px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 60%;
+    height: 45px;
+}
+.login_icon{
+    align-self: center;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+.login_input_area input{
+    outline: none;
+    border-width: 0;
+    width: 85%;
+    background-color: lightgray;
+}
+.login_btn{
+    width: 60%;
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #efefef;
+    cursor: pointer;
+}
+.login_btn:hover{
+    background-color: #efefefa8;
+}
+.register_area{
+    width: 70%;
+    display: flex;
+}
+.register_area div{
+    width: 100%;
+}
+.register_area div span{
+    cursor: pointer;
+}
+.register_area div span:hover{
+    color: #989898;
 }

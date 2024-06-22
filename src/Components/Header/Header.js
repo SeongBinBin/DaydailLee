@@ -1,13 +1,14 @@
 import React, {useState} from "react";
 import './Header.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineClose, AiOutlineUser, AiOutlineLock, } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
-import Register from "../../Pages/Register/Register";
 
 function Header() {
     const [clickList, setClickList] = useState(false)
     const [clickUser, setClickUser] = useState(false)
+
+    const navigate = useNavigate()
 
     function listClick(){
         setClickList(!clickList)
@@ -15,6 +16,10 @@ function Header() {
 
     function userClick(){
         setClickUser(!clickUser)
+    }
+
+    function gotoHome(){
+        navigate('/DaydailLee')
     }
 
     return(
@@ -25,7 +30,10 @@ function Header() {
                 ): (
                     <AiOutlineClose className="header_icon" onClick={listClick}/>
                 )}
-                <p className="header_logo">DaydailLee</p>
+                <p
+                    className="header_logo"
+                    onClick={gotoHome}
+                >DaydailLee</p>
                 <div className="header_icon_group">
                     <AiOutlineUser className="header_icon" onClick={userClick}/>
                     <FiSearch className="header_icon"/>

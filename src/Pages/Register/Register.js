@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from "react";
 import './Register.css'
-import { collection, doc, setDoc, serverTimestamp } from "firebase/firestore";
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import { doc, setDoc, serverTimestamp } from "firebase/firestore";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
 import { db, auth } from "../../firebase";
-import Header from '../../Components/Header/Header'
 
 function Register() {
     const [name, setName] = useState("");
@@ -39,28 +38,29 @@ function Register() {
     const registerDone = async () => {
         if(password !== confirmPassword){
             alert('비밀번호가 일치하지 않습니다.')
-            return;
-        }
-
-        try{
-            const addUser = await createUserWithEmailAndPassword(auth, email, password)
-            const user = addUser.user;
-
-            const createdAt = serverTimestamp();
-
-            await setDoc(doc(db, 'users', user.uid), {
-                name: name,
-                birth: birth,
-                phone: phone,
-                email: email,
-                createdAt: createdAt,
-                manager: false,
-            })
-
-            navigate('/DaydailLee')
-        }catch(error){
-            console.error('Error registering user : ', error)
-            alert(getErrorMessage(error.code))
+        }else if(birth.length !== 8 || !['19', '20'].includes(birth.slice(0, 2))){
+            alert('생년월일 형식을 다시 확인해주세요.')
+        }else{
+            try{
+                const addUser = await createUserWithEmailAndPassword(auth, email, password)
+                const user = addUser.user;
+    
+                const createdAt = serverTimestamp();
+    
+                await setDoc(doc(db, 'users', user.uid), {
+                    name: name,
+                    birth: Number(birth),
+                    phone: phone,
+                    email: email,
+                    createdAt: createdAt,
+                    manager: false,
+                })
+    
+                navigate('/DaydailLee')
+            }catch(error){
+                console.error('Error registering user : ', error)
+                alert(getErrorMessage(error.code))
+            }
         }
     }
 
@@ -80,7 +80,6 @@ function Register() {
 
     return(
         <div className="register_container">
-            <Header />
             <div className="register_box">
                 <span className="register_title">회원가입</span>
                 <div className="register_input_area">
@@ -94,10 +93,10 @@ function Register() {
                 <div className="register_input_area">
                     <span>Birth</span>
                     <input
-                        placeholder="생년월일을 입력해주세요. (YYMMDD)"
+                        placeholder="생년월일을 입력해주세요. (YYYYMMDD)"
                         value={birth}
                         onChange={handleBirthInput}
-                        maxLength={6}
+                        maxLength={8}
                     />
                 </div>
                 <div className="register_input_area">
@@ -120,6 +119,7 @@ function Register() {
                     <span>PW</span>
                     <input
                         placeholder="비밀번호를 입력해주세요. (6자 이상)"
+                        type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
@@ -133,6 +133,7 @@ function Register() {
                     </div>
                     <input
                         placeholder="비밀번호를 다시 입력해주세요."
+                        type="password"
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     />

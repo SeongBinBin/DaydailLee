@@ -1,0 +1,28 @@
+.MainPage_container{
+    width: 100%;
+    padding-top: 8vh;
+    padding-bottom: 5vh;
+}
+
+.MainPage_area{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 60px;
+}
+
+.main_picture_area{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.main_picture{
+    width: 100%;
+}
+.main_item_info{
+    display: flex;
+    flex-direction: column;
+}

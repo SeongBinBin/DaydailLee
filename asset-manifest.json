@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/DaydailLee/static/css/main.f8b3748a.css",
-    "main.js": "/DaydailLee/static/js/main.d3a37ffc.js",
+    "main.css": "/DaydailLee/static/css/main.25a6301a.css",
+    "main.js": "/DaydailLee/static/js/main.5124bd36.js",
     "static/js/453.2eb78869.chunk.js": "/DaydailLee/static/js/453.2eb78869.chunk.js",
     "static/media/picture_01.jpg": "/DaydailLee/static/media/picture_01.9d5b9c5f68a2fa8b6b51.jpg",
     "static/media/picture_04.jpg": "/DaydailLee/static/media/picture_04.5edb10316773f253b74b.jpg",
     "static/media/picture_02.jpg": "/DaydailLee/static/media/picture_02.8b27e412f72e2326c661.jpg",
     "static/media/picture_03.jpg": "/DaydailLee/static/media/picture_03.2ff63d0bf7b0d81b7afc.jpg",
     "index.html": "/DaydailLee/index.html",
-    "main.f8b3748a.css.map": "/DaydailLee/static/css/main.f8b3748a.css.map",
-    "main.d3a37ffc.js.map": "/DaydailLee/static/js/main.d3a37ffc.js.map",
+    "main.25a6301a.css.map": "/DaydailLee/static/css/main.25a6301a.css.map",
+    "main.5124bd36.js.map": "/DaydailLee/static/js/main.5124bd36.js.map",
     "453.2eb78869.chunk.js.map": "/DaydailLee/static/js/453.2eb78869.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8b3748a.css",
-    "static/js/main.d3a37ffc.js"
+    "static/css/main.25a6301a.css",
+    "static/js/main.5124bd36.js"
   ]
 }

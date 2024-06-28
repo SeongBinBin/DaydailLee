@@ -112,6 +112,12 @@ function Header() {
             {clickList && (
                 <div className="list_area">
                     <div className="list_detail_area">
+                        <p>BEST</p>
+                    </div>
+                    <div className="list_detail_area">
+                        <p>NEW</p>
+                    </div>
+                    <div className="list_detail_area">
                         <p>TOP</p>
                         <span>Short Sleeve</span>
                         <span>Shirt</span>
@@ -127,6 +133,9 @@ function Header() {
                     </div>
                     <div className="list_detail_area">
                         <p>ACC</p>
+                    </div>
+                    <div className="list_detail_area">
+                        <p>SALES</p>
                     </div>
                 </div>
             )}

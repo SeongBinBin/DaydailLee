@@ -4,9 +4,9 @@
 }
 
 .header_area{
-    background-color: lightgray;
     display: flex;
-    /* border: 1px solid black; */
+    border-bottom: .5px solid #DEDEDE;
+    background-color: #fff;
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
@@ -36,7 +36,8 @@
     position: absolute;
     height: 100vh;
     width: 15%;
-    background-color: lightgray;
+    background-color: #fff;
+    border-right: .5px solid #DEDEDE;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -48,7 +49,7 @@
     gap: 4px;
 }
 .list_detail_area p{
-    color: #F3F3F3;
+    color: #CCCCCC;
 }
 
 .list_area span{
@@ -60,9 +61,10 @@
 
 .user_area{
     position: absolute;
-    /* height: 100vh; */
     width: 25%;
-    background-color: lightgray;
+    background-color: #fff;
+    border-left: .5px solid #DEDEDE;
+    border-bottom: .5px solid #DEDEDE;
     right: 0;
 }
 
@@ -99,8 +101,8 @@
 .login_input_area input{
     outline: none;
     border-width: 0;
-    width: 85%;
-    background-color: lightgray;
+    width: 80%;
+    background-color: #fff;
 }
 
 .auto_login_area{
